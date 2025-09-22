@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portifolio</title>
+</head>
+
+<body>
+    <div class="particulas"></div>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#Inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+            <li>
+                <a href="https://github.com/Gu1Andrade" class="menu-link">Guithub</a>
+            </li>
+        </ul>
+
+    </nav>
+    <main id="Inicio" class="cabecalho">
+        <img src="/imagens/Guilherme.jpeg" alt="Foto de guilherme Andrade Alves" class="foto-perfil">
+        <h1>Guilherme Andrade</h1>
+        <p class="sub-titulo">Desenvolvedor Back End</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Sou desenvolvedor back-end em formação, apaixonado por tecnologia e pelo desafio
+                de transformar ideias em sistemas
+                funcionais. Busco minha primeira oportunidade para colocar em prática meus conhecimentos em Python,
+                Django e bancos de dados, sempre com vontade de aprender e evoluir.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projeto-caixa">
+            <a href="https://github.com/Gu1Andrade/Alura_Space" target="_blank" class="projetos-link"">
+            <div class=" projetos-card">
+                <img src="/imagens/Alura_space.jpg" alt="Projeto Alura Space" class="projetos-imagem">
+                <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">Alura Space</h3>
+                    <p class="paragrafo-projetos">Projeto Alura Space: uma galeria de imagens desenvolvida
+                        com Django, que explora conceitos de back-end, templates e integração com banco de dados.</p>
+                </div>
+        </div>
+        </a>
+        <a href="https://github.com/Gu1Andrade/projeto-alura-" target="_blank" class="projetos-link"">
+        <div class=" projetos-card">
+            <img src="/imagens/Alura_plus.png" alt="Projeto Alura Plus" class="projetos-imagem">
+            <div class="caixa-texto-projetos">
+                <h3 class="info-projetos">Alura Plus</h3>
+                <p class="paragrafo-projetos">Projeto Alura Plus: página de divulgação de serviços de streaming,
+                    desenvolvida com HTML e CSS, aplicando conceitos de layout responsivo e boas práticas de
+                    front-end.
+                </p>
+            </div>
+            </div>
+        </a>
+        <a href="https://github.com/Gu1Andrade/Alura-Books" target="_blank" class="projetos-link"">
+        <div class=" projetos-card">
+            <img src="/imagens/alura_books.png" alt="Projeto Alura Books" class="projetos-imagem">
+            <div class="caixa-texto-projetos">
+                <h3 class="info-projetos">Alura Books</h3>
+                <p class="paragrafo-projetos">Projeto Alura Books: plataforma de apresentação de livros desenvolvida
+                    com HTML, CSS e JavaScript, aplicando conceitos de responsividade e manipulação dinâmica de
+                    conteúdo.</p>
+            </div>
+            </div>
+        </a>
+        <a href="https://github.com/Gu1Andrade/hashflix" target="_blank" class="projetos-link"">
+        <div class=" projetos-card">
+            <img src="/imagens/background_netflix.jpg" alt="Hashflix" class="projetos-imagem">
+            <div class="caixa-texto-projetos">
+                <h3 class="info-projetos">Hashflix</h3>
+                <p class="paragrafo-projetos">Plataforma de catálogo de filmes desenvolvida em Django, com sistema de
+                    cadastro,
+                    listagem e busca. O projeto aplica conceitos de back-end, templates, rotas e integração com banco de
+                    dados
+                    para simular uma experiência semelhante a serviços de streaming.</p>
+            </div>
+            </div>
+        </a>
+
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulos">Entre em contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" type="text" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="4" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+
+        </form>
+    </section>
+
+    <script>
+
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5531989575302'
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+            window.open(url, '_blank')
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
