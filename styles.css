@@ -92,6 +92,39 @@ h1 {
     color: var(--claro);
 }
 
+.links-sociais {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.links-sociais a {
+    color: var(--claro);
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+.links-sociais a:hover {
+    text-decoration: underline;
+}
+
+.links-sociais a {
+    color: var(--claro);
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+    display: inline-flex;     
+    align-items: center;       
+    gap: 6px;                 
+}
+
+.icone-social {
+    width: 20px;     
+    height: 20px;    
+    max-width: 24px; 
+    max-height: 24px;
+}
+
 .sobre {
     padding: 6rem 2rem;
 }
