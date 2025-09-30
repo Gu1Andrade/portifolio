@@ -184,6 +184,10 @@ h1 {
     margin-bottom: 50px;
 }
 
+strong {
+    color: red;
+}
+
 .projetos-card:hover{
     box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
     transform: translate(-10px) scale(1.03);
